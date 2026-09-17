@@ -1,0 +1,222 @@
+
+        /* 기본 컬러 변수 */
+        :root {
+            --menu-color: #D5D5D5;
+            --tb-main-color: #FF5E00;
+            --tb-room-color: #FFD9FA;
+            --border-color: #F361DC;
+            --header-bg: #f2f2f2;
+        }
+
+        /* 기본 레이아웃 및 폰트 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: '굴림', Tahoma, sans-serif;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            padding: 2px;
+            border: 1px solid var(--border-color);
+            font-size: 16px;
+            word-break: break-word;
+        }
+
+        th {
+            background: var(--header-bg);
+            font-weight: bold;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* 링크 스타일 */
+        a {
+            text-decoration: none;
+            color: #040f6f;
+            padding: 1px;
+        }
+
+        a:hover {
+            color: #dc143c;
+            padding: 1px;
+        }
+
+        /* 입력 요소 (Input, Select) */
+        input, select {
+            width: 80px;
+            font-size: 16px;
+            padding: 4px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"] {
+            margin: 1px 0;
+            font-size: 16px;
+            padding: 4px;
+        }
+
+        /* 커스텀 레이아웃 클래스 */
+        .password-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toggle-text {
+            cursor: pointer;
+            color: #007BFF;
+            font-weight: bold;
+            user-select: none;
+        }
+
+        .toggle-text:hover {
+            text-decoration: underline;
+        }
+
+        .align_box {
+            height: 30px !important;
+            box-sizing: border-box !important;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0 5px;
+            margin: 0;
+            border: 1px solid #aaa;
+        }
+
+        /* 테이블 및 메뉴 색상 클래스 */
+        .table-main {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: '굴림', Tahoma, sans-serif;
+        }
+
+        .table-main td, .table-main th {
+            padding: 6px;
+            border: 1px solid var(--border-color);
+            word-break: break-word;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .bg-menu {
+            background-color: var(--menu-color);
+            text-align: center;
+        }
+
+        .menu-choos {
+            padding: 2px;
+            text-align: center;
+            font-size: 14px;
+            background-color: var(--tb-main-color);
+        }
+
+        .bg-room {
+            border: 1px solid var(--border-color);
+            background-color: var(--tb-room-color);
+        }
+
+        .bg-edit {
+            text-align: center;
+            width: 40px;
+        }
+
+        /* 너비(Width) 제어 클래스 */
+        .wid_100 { width: 100%; display: block; margin-bottom: 5px; }
+        .wid_50 { width: 50%; display: block; margin-bottom: 5px; }
+        .wid_300px { width: 300px !important; }
+        .wid_250px { width: 250px !important; }
+        .wid_200px { width: 200px; }
+        .wid_120px { width: 120px; margin: 1px 0; }
+        .wid_100px { width: 100px; margin: 1px 0; }
+        .wid_80px { width: 80px; margin: 1px 0; }
+        .wid_60px { width: 60px; margin: 1px 0; }
+        .wid_40px { width: 40px; margin: 1px 0; text-align: center; }
+        .wid_30px { width: 30px; margin: 1px 0; text-align: center; }
+        .wid_20px { width: 20px; margin: 1px 0; text-align: center; }
+
+        /* 둥근 테두리 클래스 */
+        .rounded-menu_head {
+            border: 0 solid #ccc;
+            border-radius: 28px;
+            padding: 6px;
+            background-color: #f9f9f9;
+        }
+
+        .rounded-th {
+            border: 0 solid #ccc;
+            border-radius: 6px;
+            padding: 6px;
+            background-color: var(--menu-color);
+        }
+
+        .rounded-th_over {
+            border: 0 solid #ccc;
+            border-radius: 6px;
+            padding: 6px;
+            background-color: var(--tb-main-color);
+        }
+
+        /* 폰트 크기 클래스 */
+        .font_size_L { text-align: center; font-size: 25px; }
+        .font_size_M { text-align: center; font-size: 16px; }
+        .font_size_S { text-align: center; font-size: 10px; }
+
+        /* ===== 모바일 반응형 최적화 (700px 이하) ===== */
+        @media screen and (max-width: 700px) {
+            body {
+                background: white;
+                font-size: 16px;
+                padding: 1px;
+            }
+
+            table {
+                width: 100%;
+                font-size: 16px;
+            }
+
+            td, th {
+                font-size: 14px;
+                padding: 4px;
+            }
+
+            input, select {
+                width: 120px;
+                font-size: 16px;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .wid_100 { width: 100%; display: block; margin-bottom: 5px; }
+            .wid_50 { width: 50%; display: block; margin-bottom: 5px; }
+            .wid_200px { width: 200px; }
+            .wid_150px { width: 150px; }
+            .wid_120px { width: 120px; margin: 1px 0; }
+            .wid_100px { width: 100px; margin: 1px 0; }
+            .wid_80px { width: 80px; margin: 1px 0; }
+            .wid_60px { width: 60px; margin: 1px 0; }
+            .wid_40px { width: 40px; margin: 1px 0; text-align: center; }
+            .wid_30px { width: 30px; text-align: center; }
+            .wid_20px { width: 20px; margin: 1px 0; text-align: center; }
+            .wid_10px { width: 10px; margin: 1px 0; text-align: center; }
+
+            .font_size_L { text-align: center; font-size: 25px; }
+            .font_size_M { text-align: center; font-size: 16px; }
+            .font_size_S { text-align: center; font-size: 10px; }
+        }
+   
